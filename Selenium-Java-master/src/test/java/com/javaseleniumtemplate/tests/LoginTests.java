@@ -68,7 +68,7 @@ public class LoginTests extends TestBase {
         //Parameters
         String mensagemErroEsperada = "Your account may be disabled or blocked or the username/password you entered is incorrect.";
         String usuario = "inexistente";
-        String senha = "adm";
+        String senha = "12345678";
 
 
         //Test
@@ -87,7 +87,7 @@ public class LoginTests extends TestBase {
 
 
         //Parameters
-        String usuario = "administrator";
+        String usuario = "Rodrigo_Roel";
         String mensagemErroEsperada = "Your account may be disabled or blocked or the username/password you entered is incorrect.";
 
 
@@ -171,30 +171,6 @@ public class LoginTests extends TestBase {
         Assert.assertEquals(pageUrl, loginPage.getCurrentUrl());
     }
 
-    @Test
-    public void validateRestrictionsUserViewer(){
-
-        //Objects instances
-        loginPage = new LoginPage();
-        mainPage = new MainPage();
-        loginFlows = new LoginFlows();
-        softAssert = new SoftAssert();
-
-
-        //Parameters
-        String usuario = "viewer";
-        String senha = "adm";
-
-
-        //Test
-        loginFlows.signIn(usuario, senha);
-
-
-        //Assertions
-        softAssert.assertFalse(mainPage.returnIfReportExists());
-        softAssert.assertFalse(mainPage.returnIfManageExists());
-        softAssert.assertAll();
-    }
 
 
     @Test

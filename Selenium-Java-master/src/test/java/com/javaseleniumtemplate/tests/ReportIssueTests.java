@@ -161,9 +161,7 @@ public class ReportIssueTests extends TestBase {
         issuePage = new IssuePage();
 
         //Parameteres
-        String usuario = "administrator";
-        String senha = "adm";
-        String categoria = "[All Projects] Automacao";
+     ;
         String resumo = "Issue com arquivo upado";
         String descricao = "Descrição arquivo upado";
         String file = GlobalParameters.FILES_PATH + "error.png";
@@ -195,9 +193,6 @@ public class ReportIssueTests extends TestBase {
         issuePage = new IssuePage();
 
         //Parameteres
-        String usuario = "administrator";
-        String senha = "adm";
-        String categoria = "[All Projects] Automacao";
         String resumo = "Issue com arquivo upado acima do tamanho maximo";
         String descricao = "Descrição arquivo upado acima do tamanho maximo";
         String file = GlobalParameters.FILES_PATH + "bigerror.png";
